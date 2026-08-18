@@ -586,7 +586,120 @@ export default function WebsiteSettingsPage() {
               </CardContent>
             </Card>
           </TabsContent>
+
+          {/* Page sections (one-page layout) */}
+          <TabsContent value="pagecontent" className="mt-4 space-y-4">
+            <Card className="glass-card">
+              <CardHeader className="border-b border-border/30">
+                <CardTitle className="text-base">One-Page Layout Content</CardTitle>
+                <CardDescription>
+                  Your site is a single scrolling page: Hero → About → Services &amp; Booking → Reviews → Visit → Footer.
+                  Edit the copy for each band here. Colours and fonts still come from your chosen template.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6 max-w-lg pt-6">
+                <div className="space-y-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Hero</p>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Eyebrow badge</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Asaba's Premier Dental Clinic" value={get("hero_eyebrow")} onChange={(e) => set("hero_eyebrow", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Highlighted second line</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Personal Touch." value={get("hero_highlight")} onChange={(e) => set("hero_highlight", e.target.value)} />
+                    <p className="text-[10px] text-muted-foreground">Shown under the hero title in your primary colour.</p>
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Hero badge card title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Same-day appointments" value={get("hero_badge_title")} onChange={(e) => set("hero_badge_title", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Hero badge card subtitle</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Call or book online and we'll fit you in." value={get("hero_badge_subtitle")} onChange={(e) => set("hero_badge_subtitle", e.target.value)} />
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">About section</p>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Eyebrow</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="About us" value={get("about_eyebrow")} onChange={(e) => set("about_eyebrow", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Dental excellence, redefined for Asaba." value={get("about_title")} onChange={(e) => set("about_title", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Paragraph 1</Label>
+                    <Textarea className="bg-muted/30 border-border/40 min-h-[80px]" value={get("about_body")} onChange={(e) => set("about_body", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Paragraph 2</Label>
+                    <Textarea className="bg-muted/30 border-border/40 min-h-[80px]" value={get("about_body_2")} onChange={(e) => set("about_body_2", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Highlight banner title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Trusted by 5,000+ patients" value={get("about_highlight_title")} onChange={(e) => set("about_highlight_title", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Highlight banner subtitle</Label>
+                    <Input className="bg-muted/30 border-border/40" value={get("about_highlight_subtitle")} onChange={(e) => set("about_highlight_subtitle", e.target.value)} />
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Services &amp; booking band</p>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Eyebrow</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Our services" value={get("booking_eyebrow")} onChange={(e) => set("booking_eyebrow", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Select your services & book instantly." value={get("booking_section_title")} onChange={(e) => set("booking_section_title", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Subtitle</Label>
+                    <Textarea className="bg-muted/30 border-border/40 min-h-[60px]" value={get("booking_section_subtitle")} onChange={(e) => set("booking_section_subtitle", e.target.value)} />
+                  </div>
+                  <p className="text-[10px] text-muted-foreground">Services listed here come from your Treatments page, grouped by category.</p>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Reviews band</p>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Eyebrow</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Patient stories" value={get("reviews_eyebrow")} onChange={(e) => set("reviews_eyebrow", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="What our patients say." value={get("reviews_title")} onChange={(e) => set("reviews_title", e.target.value)} />
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Visit band</p>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Eyebrow</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Location" value={get("visit_eyebrow")} onChange={(e) => set("visit_eyebrow", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Title</Label>
+                    <Input className="bg-muted/30 border-border/40" placeholder="Visit us today." value={get("visit_title")} onChange={(e) => set("visit_title", e.target.value)} />
+                  </div>
+                  <div className="space-y-2">
+                    <Label className="text-xs font-medium">Subtitle</Label>
+                    <Textarea className="bg-muted/30 border-border/40 min-h-[60px]" value={get("visit_subtitle")} onChange={(e) => set("visit_subtitle", e.target.value)} />
+                  </div>
+                </div>
+
+                <Button className="bg-secondary hover:bg-secondary/90 shadow-lg shadow-secondary/20" onClick={() => handleSave()} disabled={updateClinic.isPending}>
+                  {updateClinic.isPending ? "Saving..." : "Save Page Content"}
+                </Button>
+              </CardContent>
+            </Card>
+          </TabsContent>
         </Tabs>
+
       </motion.div>
     </div>
   );
