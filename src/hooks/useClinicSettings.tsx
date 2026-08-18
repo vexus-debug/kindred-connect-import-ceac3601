@@ -65,6 +65,32 @@ export interface SiteSettings {
   hero_video_url?: string;
   hero_cta_label?: string;
   hero_cta_type?: "booking" | "whatsapp" | "call";
+  hero_eyebrow?: string;
+  hero_highlight?: string;
+  hero_badge_title?: string;
+  hero_badge_subtitle?: string;
+
+  // About section (one-page layout)
+  about_eyebrow?: string;
+  about_title?: string;
+  about_body?: string;
+  about_body_2?: string;
+  about_highlight_title?: string;
+  about_highlight_subtitle?: string;
+
+  // Services & booking section
+  booking_eyebrow?: string;
+  booking_section_title?: string;
+  booking_section_subtitle?: string;
+
+  // Reviews section
+  reviews_eyebrow?: string;
+  reviews_title?: string;
+
+  // Visit section
+  visit_eyebrow?: string;
+  visit_title?: string;
+  visit_subtitle?: string;
 
   // Colors
   primary_color?: string;
