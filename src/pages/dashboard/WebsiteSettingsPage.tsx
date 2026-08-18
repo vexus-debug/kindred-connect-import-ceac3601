@@ -218,6 +218,8 @@ export default function WebsiteSettingsPage() {
           <TabsList className="bg-muted/50 backdrop-blur-sm flex-wrap h-auto gap-1">
             <TabsTrigger value="templates"><LayoutTemplate className="mr-1.5 h-3.5 w-3.5" />Templates</TabsTrigger>
             <TabsTrigger value="identity"><Globe className="mr-1.5 h-3.5 w-3.5" />Identity & Hero</TabsTrigger>
+            <TabsTrigger value="pagecontent"><Megaphone className="mr-1.5 h-3.5 w-3.5" />Page Sections</TabsTrigger>
+
             <TabsTrigger value="gallery"><Camera className="mr-1.5 h-3.5 w-3.5" />Gallery</TabsTrigger>
             <TabsTrigger value="hours"><Clock className="mr-1.5 h-3.5 w-3.5" />Hours</TabsTrigger>
             <TabsTrigger value="appearance"><Palette className="mr-1.5 h-3.5 w-3.5" />Appearance</TabsTrigger>
